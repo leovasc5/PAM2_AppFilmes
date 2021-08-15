@@ -1,3 +1,4 @@
+import { IFilme } from '../models/IFilmes.model';
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
@@ -8,6 +9,27 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+
+  titulo = 'App Filmes';
+  listaFilmes: IFilme[] = [
+    {       
+      nome: 'Cruella (2021)',
+      lancamento: '27/05/2021 (BR)',
+      duracao: '2h 14m',
+      classificacao: '12',
+      cartaz: 'https://upload.wikimedia.org/wikipedia/pt/f/f6/Cruella_2021_film_poster.jpg',
+      generos: ['Comédia', 'Aventura']
+    },
+    {       
+      nome: 'O Esquadrão Suícida (2021)',
+      lancamento: '05/08/2021 (BR)',
+      duracao: '2h 12m',
+      classificacao: '14',
+      cartaz: 'https://upload.wikimedia.org/wikipedia/pt/4/4e/The_Suicide_Squad_official_poster.jpeg',
+      generos: ['Comédia', 'Aventura', 'Ação']
+    } 
+
+  ];
 
   constructor(public alertController: AlertController, public toastController: ToastController) {}
 
