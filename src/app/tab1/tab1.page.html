@@ -1,17 +1,62 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Filmes
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-item-sliding>
+    <ion-list lines="full"> <!--atributo para que a linha ocupe toda a base do componente-->
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/f/f6/Cruella_2021_film_poster.jpg">
+        </ion-thumbnail>
+        <ion-label class="ion-text-wrap"> <!-- classe para quebra de linha-->
+          <div>
+            <h1>Cruella (2021)</h1>
+            <p>27/05/2021 (BR) - 2h 14m</p>
+            <p>Comédia, Aventura
+            <p>
+          </div>
+        </ion-label>
+        <ion-chip color="success" outline>
+          <ion-label>76%</ion-label>
+        </ion-chip>
+      </ion-item>
+      <ion-item-options (click)="exibirAlertaFavorito()" side="end">
+        <ion-item-option color="tertiary">
+          <ion-icon slot="icon-only" name="star"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-list>
+  </ion-item-sliding>
+
+  <ion-item-sliding>
+    <ion-list lines="full"> <!--atributo para que a linha ocupe toda a base do componente-->
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/4/4e/The_Suicide_Squad_official_poster.jpeg">
+        </ion-thumbnail>
+        <ion-label class="ion-text-wrap"> <!-- classe para quebra de linha-->
+          <div>
+            <h1>O Esquadrão Suícida (2021)</h1>
+            <p>05/08/2021 (BR) - 2h 12m</p>
+            <p>Comédia, Aventura, Ação</p>
+          </div>
+        </ion-label>
+        <ion-chip color="warning" outline>
+          <ion-label>65%</ion-label>
+        </ion-chip>
+      </ion-item>
+      <ion-item-options (click)="exibirAlertaFavorito()" side="end">
+        <ion-item-option color="tertiary">
+          <ion-icon slot="icon-only" name="star"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-list>
+  </ion-item-sliding>
+
 </ion-content>
