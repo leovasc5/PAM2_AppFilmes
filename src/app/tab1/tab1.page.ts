@@ -30,7 +30,6 @@ export class Tab1Page {
         }
       ]
     });
-
     await alert.present();
   }
 
