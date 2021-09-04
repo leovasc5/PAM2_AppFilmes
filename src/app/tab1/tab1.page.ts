@@ -18,7 +18,8 @@ export class Tab1Page {
       duracao: '2h 14m',
       classificacao: '12',
       cartaz: 'https://upload.wikimedia.org/wikipedia/pt/f/f6/Cruella_2021_film_poster.jpg',
-      generos: ['Comédia', 'Aventura']
+      generos: ['Comédia', 'Aventura'],
+      pagina: '/cruella'
     },
     {       
       nome: 'O Esquadrão Suícida (2021)',
@@ -26,7 +27,8 @@ export class Tab1Page {
       duracao: '2h 12m',
       classificacao: '14',
       cartaz: 'https://upload.wikimedia.org/wikipedia/pt/4/4e/The_Suicide_Squad_official_poster.jpeg',
-      generos: ['Comédia', 'Aventura', 'Ação']
+      generos: ['Comédia', 'Aventura', 'Ação'],
+      pagina: '/o-esquadrao-suicida'
     } 
 
   ];
@@ -36,7 +38,7 @@ export class Tab1Page {
   async exibirAlertaFavorito() {
     const alert = await this.alertController.create({
       header: 'Confirmação',
-      message: 'VocÇe deseja adicionar esse filme aos <strong>favoritos</strong>?',
+      message: 'Você deseja adicionar esse filme aos <strong>favoritos</strong>?',
       buttons: [
         {
           text: 'Cancelar',
